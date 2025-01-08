@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+
+}
+@layer components {
+    
+    .warp-input-text {
+        @apply py-2 px-4 block w-full rounded-md border border-gray-500 shadow-sm focus:border-primary-600 focus:ring-primary-600 sm:text-sm;
+    }
+
+    .btn {        
+        @apply text-center;
+        @apply rounded-md ;
+        @apply border border-gray-600 border-solid;
+        @apply bg-transparent;
+        @apply px-8;
+        @apply py-3;
+        @apply text-gray-900;
+        @apply font-medium;
+        @apply hover:bg-gray-600 hover:text-gray-700;
+        @apply shadow-sm;
+        @apply focus:outline-none focus:ring-2 focus:ring-gray-500; 
+        @apply focus:ring-offset-2 focus:ring-offset-gray-50;
+    }
+    .btn-wide {
+        
+        @apply w-full;
+        @apply block;
+    }
+
+    .btn-ring {
+        
+        @apply rounded-full ;
+    }
+        
+    .primary {
+        @apply rounded-md ;
+        
+        @apply border-primary-600;    
+        @apply text-primary-inv-600;
+        @apply bg-primary-600;
+        @apply hover:bg-white;
+        @apply hover:text-primary-600;
+        @apply focus:ring-primary-500;
+    }
+
+    .btn-ring-primary {
+        
+        @apply border-primary-600;    
+        @apply text-primary-inv-600;
+        @apply bg-primary-600;
+        @apply hover:bg-white;
+        @apply hover:text-primary-600;
+        @apply focus:ring-primary-500;
+        }
+    .btn-ring-primary-light {
+        
+        @apply border-primary-600;    
+        @apply text-primary-500;
+        @apply hover:bg-primary-600;
+        @apply hover:text-primary-inv-700;
+        @apply focus:ring-primary-500;
+    }
+
+    .secondary {
+        
+        @apply rounded-md ;
+        @apply border-secondary-600;    
+        @apply text-secondary-inv-600;
+        @apply bg-secondary-600;
+        @apply hover:bg-white;
+        @apply hover:text-secondary-600;
+        @apply focus:ring-secondary-500;
+    }
+    .btn-ring-secondary {
+        
+        @apply border-secondary-600;    
+        @apply text-secondary-inv-600;
+        @apply bg-secondary-600;
+        @apply hover:bg-white;
+        @apply hover:text-secondary-600;
+        @apply focus:ring-secondary-500;
+    }
+
+    .btn-ring-secondary-light {
+        
+        @apply border-secondary-500;    
+        @apply text-secondary-500;
+        @apply hover:bg-secondary-600;
+        @apply hover:text-secondary-inv-600;
+        @apply focus:ring-secondary-500;
+    }
+    .tertiary {
+        @apply rounded-md ;
+        
+        @apply border-tertiary-600;    
+        @apply text-tertiary-inv-600;
+        @apply bg-tertiary-600;
+        @apply hover:bg-white;
+        @apply hover:text-tertiary-600;
+        @apply focus:ring-tertiary-500;
+    }
+    
+    .btn-ring-tertiary {
+        
+        @apply border-tertiary-600;    
+        @apply text-tertiary-inv-600;
+        @apply bg-tertiary-600;
+        @apply hover:bg-white;
+        @apply hover:text-tertiary-600;
+        @apply focus:ring-tertiary-500;
+        }
+    .btn-ring-tertiary-light {
+        
+        @apply border-tertiary-600;    
+        @apply text-tertiary-500;
+        @apply hover:bg-tertiary-600;
+        @apply hover:text-tertiary-inv-700;
+        @apply focus:ring-tertiary-500;
+    }
+
+    .cta {
+        @apply rounded-md ;
+        
+        @apply border-cta-600 text-cta-inv-600 bg-cta-600;
+        @apply hover:bg-white hover:text-cta-600;
+        @apply focus:ring-cta-500;
+    }
+    
+    .btn-ring-cta {
+        
+        @apply border-cta-600 text-cta-inv-600 bg-cta-600;
+        @apply hover:bg-white hover:text-cta-600;
+        @apply focus:ring-cta-500;
+        }
+    .btn-ring-cta-light {
+        
+        @apply border-cta-600 text-cta-500;
+        @apply hover:bg-cta-600 hover:text-cta-inv-700;
+        @apply focus:ring-cta-500;
+    }
+
+    .btn-small {
+        @apply px-3;
+        @apply py-2;
+        @apply text-sm;
+    }
+  
+.html-post legend {
+  @apply text-base font-medium text-gray-900;
+}
+
+.html-post label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.html-post input {
+  @apply mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm;
+}
+
+.html-post select {
+  @apply mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm;
+}
+
+.html-post option {
+  @apply text-gray-900;
+}
+
+.html-post textarea {
+  @apply mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm;
+}
+
+.html-post button {
+  @apply mt-2 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+}
+
+.html-post checkbox {
+  @apply mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded;
+}
+
+.html-post radio {
+  @apply mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded;
+}
+
+.html-post img {
+  @apply h-24 w-24 rounded-md object-cover object-center sm:h-48 sm:w-48;
+}
+
+.html-post a {
+  @apply text-primary-600 hover:text-primary-900;
+}
+
+.html-post h1 {
+  @apply text-5xl font-bold text-heading;
+}
+
+.html-post h2 {
+  @apply text-4xl font-bold text-heading;
+}
+
+.html-post h3 {
+  @apply text-3xl font-extrabold text-heading;
+}
+
+.html-post h4 {
+  @apply text-2xl font-extrabold text-heading;
+}
+
+.html-post h5 {
+  @apply text-xl font-extrabold text-heading;
+}
+
+.html-post figcaption {
+  @apply text-sm text-gray-500;
+}
+
+.html-post p {
+  @apply mt-2 text-sm text-gray-500;
+}
+
+.html-post hr {
+  @apply border-t border-gray-200 my-4;
+}
+
+.html-post table {
+  @apply min-w-full divide-y divide-gray-200 border-b border-t border-gray-200 mb-4;
+}
+
+.html-post table thead {
+  @apply bg-gray-50;
+}
+
+.html-post table th {
+  @apply py-3 px-6 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.html-post table tbody {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.html-post table td {
+  @apply py-4 px-6 whitespace-nowrap text-sm text-gray-500;
+}
+
+.html-post table tfoot {
+  @apply bg-gray-50;
+}
+
+.html-post ul {
+  @apply divide-y divide-gray-200 border-b border-t border-gray-200 mb-4;
+}
+
+.html-post ul li {
+  @apply flex py-6 sm:py-10;
+}
+
+.html-post ol {
+  @apply divide-y divide-gray-200 border-b border-t border-gray-200 mb-4;
+}
+
+.html-post ol li {
+  @apply flex py-6 sm:py-10;
+}
+
+.html-post dl {
+  @apply divide-y divide-gray-200 border-b border-t border-gray-200 mb-4;
+}
+
+.html-post dl dt {
+  @apply text-sm font-medium text-gray-500;
+}
+
+.html-post dl dd {
+  @apply mt-1 text-sm text-gray-900;
+}
+
+}

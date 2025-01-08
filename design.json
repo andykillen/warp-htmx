@@ -1,0 +1,292 @@
+{
+    "accessibility" : {
+        "screenreader" :  "sr-only"
+    },
+    "html" : {
+        "body" : {
+            "container" : "bg-body-backgrond text-body-text font-medium"
+        },
+        "header" : {
+            "container" : "bg-white shadow-sm",
+            "inner" : "px-4 py-6 sm:px-6 lg:px-8",
+            "logo" : {
+                "container" : "flex items-center justify-between",
+                "a" : "flex items-center",
+                "img" : "h-8 w-auto"
+            },
+            "nav" : {
+                "container" : "hidden lg:block lg:ml-10 lg:pr-4 lg:space-x-8",
+                "a" : "font-medium text-gray-900 hover:text-gray-900"
+            }
+        },
+        "main" : {
+            "container" : "px-4 pb-24 pt-16 sm:px-6 lg:max-w-7xl lg:px-8"
+        },
+        "footer" : {
+            "container" : "bg-white shadow-sm",
+            "inner" : "px-4 py-6 sm:px-6 lg:px-8",
+            "nav" : {
+                "container" : "flex justify-center space-x-6",
+                "a" : "text-sm text-gray-900 hover:text-gray-900"
+            }
+        },
+        "table" : {
+            "container" : "min-w-full divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+            "thead" : {
+                "container" : "bg-gray-50",
+                "tr" : ""
+            },
+            "th" : "py-3 px-6 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+            "tbody" : {
+                "container" : "bg-white divide-y divide-gray-200",
+                "tr" : ""
+            },
+            "td"  : "py-4 px-6 whitespace-nowrap text-sm text-gray-500",
+            "tfoot" : {
+                "container" : "bg-gray-50",
+                "tr" : ""
+            }
+        },
+        "ul" :{
+            "container" : "divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+            "li" : "flex py-6 sm:py-10"
+        },
+        "ol" : {
+            "container" : "divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+            "li" : "flex py-6 sm:py-10"
+        },
+        "dl" : {
+            "container" : "divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+            "dt" : "text-sm font-medium text-gray-500",
+            "dd" : "mt-1 text-sm text-gray-900"
+        },
+        "legend": "text-base font-medium text-gray-900",
+        "label" : "block text-sm font-medium text-gray-700",
+        "input" : {
+            "container" : "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm",
+            "text": "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+        },
+        "select" : "mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm",
+        "option" : "text-gray-900",
+        "textarea" : "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm",
+        "button" : "mt-2 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500",
+        "checkbox" : "mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded",
+        "radio" : "mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded",
+        "img" : "h-24 w-24 rounded-md object-cover object-center sm:h-48 sm:w-48",
+        "a" : "focus:ring-4 focus:ring-primary-300 no-underline hover:underline hover:text-primary-600 text-grey-400",
+        "h1" : "text-5xl font-bold text-heading",
+        "h2" : "text-4xl font-bold text-heading",
+        "h3" : "text-3xl font-extrabold text-heading",
+        "h4" : "text-2xl font-extrabold text-heading",
+        "h5" : "text-xl font-extrabold text-heading",
+        "figcaption" : "text-sm text-gray-500",
+        "p" : "mt-2 text-sm text-gray-500",
+        "hr" : "border-t border-gray-200 my-4",
+        "figure" : "",
+        "em" : "",
+        "strong" : "",
+        "small" : "",
+        "sub" : "",
+        "sup" : "",
+        "blockquote" : "",
+        "cite" : "",
+        "pre" : "",
+        "code" : "",
+        "abbr" : "",
+        "address" : "",
+        "time" : "",
+        "del" : "",
+        "ins" : "",
+        "mark" : "",
+        "dfn" : "",
+        "kbd" : "",
+        "samp" : "",
+        "var" : ""
+    },
+    "excerpt" : {
+        "container" : "text-sm text-gray-500",
+        "product" :{
+            "container" : "text-sm text-gray-500"
+        },
+        "term" : {
+            "container" : "text-sm text-gray-500"
+        }
+    },
+    "buttons" : {
+        "primary" : "w-full rounded-full border bg-primary-600 hover:bg-primary-inv-700 hover:text-primary-inv-700 px-4 py-3 text-base font-medium text-primary-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-primary-500 focus:ring-offset-2 focus:ring-offset-gray-50",
+        "secondary" : "w-full rounded-full border bg-secondary-600 hover:bg-secondary-inv-700 hover:text-secondary-inv-700 px-4 py-3 text-base font-medium text-secondary-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-secondary-500 focus:ring-offset-2 focus:ring-offset-gray-50",
+        "tertiary" : "w-full rounded-full border bg-tertiary-600 hover:bg-tertiary-inv-700 hover:text-tertiary-inv-700 px-4 py-3 text-base font-medium text-tertiary-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-tertiary-500 focus:ring-offset-2 focus:ring-offset-gray-50",
+        "cta" : "w-full rounded-full border bg-cta-600 hover:bg-cta-inv-700 hover:text-cta-inv-700 px-4 py-3 text-base font-medium text-cta-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-cta-500 focus:ring-offset-2 focus:ring-offset-gray-50",
+
+        "outline" : {
+            "primary" : "w-full rounded-md bg-body-background  border border-primary-600 hover:bg-primary-inv-700 hover:text-primary-inv-700 px-4 py-3 text-base font-medium text-primary-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-primary-500 focus:ring-offset-2 focus:ring-offset-gray-50",
+            "secondary" : "w-full rounded-md bg-body-background border border-secondary-600 hover:bg-secondary-inv-700 hover:text-secondary-inv-700 px-4 py-3 text-base font-medium text-secondary-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-secondary-500 focus:ring-offset-2 focus:ring-offset-gray-50",
+            "tertiary" : "w-full rounded-md bg-body-background border border-tertiary-600 hover:bg-tertiary-inv-700 hover:text-tertiary-inv-700 px-4 py-3 text-base font-medium text-tertiary-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-tertiary-500 focus:ring-offset-2 focus:ring-offset-gray-50",
+            "cta" : "w-full rounded-md bg-body-background border border-cta-600 hover:bg-cta-inv-700 hover:text-cta-inv-700 px-4 py-3 text-base font-medium text-cta-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-cta-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+        },
+        "square" : {
+            "primary" : "w-full  bg-primary-600 hover:bg-primary-inv-700 hover:text-primary-inv-700 px-4 py-3 text-base font-medium text-primary-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-primary-500 focus:ring-offset-2 focus:ring-offset-gray-50",
+            "secondary" : "w-full  bg-secondary-600 hover:bg-secondary-inv-700 hover:text-secondary-inv-700 px-4 py-3 text-base font-medium text-secondary-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-secondary-500 focus:ring-offset-2 focus:ring-offset-gray-50",
+            "tertiary" : "w-full  bg-tertiary-600 hover:bg-tertiary-inv-700 hover:text-tertiary-inv-700 px-4 py-3 text-base font-medium text-tertiary-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-tertiary-500 focus:ring-offset-2 focus:ring-offset-gray-50",
+            "cta" : "w-full  bg-cta-600 hover:bg-cta-inv-700 hover:text-cta-inv-700 px-4 py-3 text-base font-medium text-cta-txt-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-btn-cta-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+        }
+    },
+    "woocommerce": {
+        "quantity_input" : "max-w-[100px] inline-block rounded-md border border-gray-300 py-1.5 text-left text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+    },
+    "page" : "max-w-screen-2xl mx-auto",
+    "pagination" : {
+      "ul": "flex flex-auto justify-center space-x-2"
+    },
+    "grid" : {
+        "columns-1" : "grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1",
+        "columns-2" : "grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2",
+        "columns-3" : "grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3",
+        "columns-4" : "grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4",
+        "columns-5" : "grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5",
+        "columns-6" : "grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-6"
+    },
+    
+    "cart" : {
+        "summary" : {
+            "table" : "table-auto md:table-fixed w-full",
+            "totals" : "",
+            "tr" : "border-b border-gray-200 pt-4",
+            "th" : "text-left text-sm text-gray-600 font-normal py-4 pl-2",
+            "td" : "text-right text-sm font-medium text-gray-900 py-4 pr-2",
+            "heading" : {
+                "container" : "mt-16 py-6 sm:p-0 lg:col-span-5 lg:mt-0 lg:px-6 lg:py-0 relative overflow-visible",
+                "holder" : "sticky top-0",
+                "coupons" : {
+                    "container": "rounded-lg bg-gray-50 mb-5 p-2 border border-gray-100",
+                    "form" : "coupon gap-3 flex"
+                }
+            }
+
+        },
+        "collaterals" : "rounded-lg bg-gray-50 mb-5 p-2 border-[1px] border-gray-100",
+        "before": {
+            "table": "mx-auto max-w-2xl px-4 pb-24 pt-16 sm:px-6 lg:max-w-7xl lg:px-8"
+        },
+        "form" : {
+            "container" : "woocommerce-cart-form mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16"
+
+        },
+        "section":{
+             "left":"lg:col-span-7",
+             "cart-heading": "sr-only",
+             "ul" : "divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+             "li" : "flex py-6 sm:py-10",
+             "thumbnail": {
+                "container" : "flex-shrink-0",
+                "img" : "h-24 w-24 rounded-md object-cover object-center sm:h-48 sm:w-48",
+                "a" : ""
+             },
+             "overview" : {
+                "outer" : "ml-4 flex flex-1 flex-col justify-between sm:ml-6" ,
+                "container" : "relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0",
+                "inner" : "",
+                "product" : {
+                    "container" : "flex justify-between",
+                    "name": "text-sm",
+                    "a" : "product-name font-medium text-gray-700 hover:text-gray-800",
+                    "attributes" :{
+                        "container" : "mt-1 flex text-sm",
+                        "text" : "text-gray-500",
+                        "size": "ml-4 border-l border-gray-200 pl-4 text-gray-500",
+                        "price" : "product-price mt-1 text-sm font-medium text-gray-900",
+                        "subtotal":  "product-price mt-1 text-sm font-medium text-gray-900",
+                        "quantity" : "product-quantity mt-4 sm:mt-0 sm:pr-9",
+                        "quantityLabel" : "sr-only"
+                    },
+                    "remove" : "absolute right-0 top-0"
+                },
+                "backorder" : {
+                    "notification" : "backorder_notification"
+                }
+             }
+        }
+    },
+
+    "checkout" : {
+
+    },
+
+    "menu" : {
+        "main" :{
+            "container" : "hidden lg:block lg:ml-10 lg:pr-4 lg:space-x-8"
+        }
+    },
+    "singular" : {
+        "content" : {
+            "container" : "max-w-2xl mx-auto px-4 pb-24 pt-16 sm:px-6 lg:max-w-7xl lg:px-8",
+            "header" : {
+                "container" : "mb-8",
+                "thumbnail" : "",
+                "meta" : {
+                    "container" : "mt-2 text-sm text-gray-500",
+                    "author" : "text-sm text-gray-500",
+                    "cats" : "text-sm text-gray-500"
+                }
+            },
+            "entry" : "",
+            "footer": {
+                "container" : "mt-8 text-sm text-gray-500",
+                "tags" : "text-sm text-gray-500"
+            }
+    },
+    "generate" : {
+        "post" : {
+                "legend": "text-base font-medium text-gray-900",
+                "label" : "block text-sm font-medium text-gray-700",
+                "input" : "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm",
+                "select" : "mt-1 block w-full pl-3 pr-10 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm",
+                "option" : "text-gray-900",
+                "textarea" : "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm",
+                "button" : "mt-2 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500",
+                "checkbox" : "mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded",
+                "radio" : "mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded",
+                "img" : "h-24 w-24 rounded-md object-cover object-center sm:h-48 sm:w-48",
+                "a" : "text-primary-600 hover:text-primary-900",
+                "h1" : "text-5xl font-bold text-heading",
+                "h2" : "text-4xl font-bold text-heading",
+                "h3" : "text-3xl font-extrabold text-heading",
+                "h4" : "text-2xl font-extrabold text-heading",
+                "h5" : "text-xl font-extrabold text-heading",
+                "figcaption" : "text-sm text-gray-500",
+                "p" : "mt-2 text-sm text-gray-500",
+                "hr" : "border-t border-gray-200 my-4",
+                "table" : {
+                "container" : "min-w-full divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+                "thead" : {
+                    "container" : "bg-gray-50",
+                    "tr" : ""
+                },
+                "th" : "py-3 px-6 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+                "tbody" : {
+                    "container" : "bg-white divide-y divide-gray-200",
+                    "tr" : ""
+                },
+                "td"  : "py-4 px-6 whitespace-nowrap text-sm text-gray-500",
+                "tfoot" : {
+                    "container" : "bg-gray-50",
+                    "tr" : ""
+                }
+            },
+            "ul" :{
+                "container" : "divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+                "li" : "flex py-6 sm:py-10"
+            },
+            "ol" : {
+                "container" : "divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+                "li" : "flex py-6 sm:py-10"
+            },
+            "dl" : {
+                "container" : "divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+                "dt" : "text-sm font-medium text-gray-500",
+                "dd" : "mt-1 text-sm text-gray-900"
+            }
+        }
+    }
+    }
+}

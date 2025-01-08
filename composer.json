@@ -1,0 +1,12 @@
+{
+    "name": "andykillen/warp-htmx",
+    "type": "wordpress-theme",
+    "license": "proprietary",
+    "minimum-stability" : "dev",
+    "description": "Creates a autoloader for use in the parent theme",
+    "autoload": {
+        "psr-4": {
+            "WarpHtmx\\": "src/"            
+        }
+    }
+}

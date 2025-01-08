@@ -1,0 +1,145 @@
+@layer components {
+    
+    .warp-input-text {
+        @apply py-2 px-4 block w-full rounded-md border border-gray-500 shadow-sm focus:border-primary-600 focus:ring-primary-600 sm:text-sm;
+    }
+
+    .btn {        
+        @apply text-center;
+        @apply rounded-md ;
+        @apply border border-gray-600 border-solid;
+        @apply bg-transparent;
+        @apply px-8;
+        @apply py-3;
+        @apply text-gray-900;
+        @apply font-medium;
+        @apply hover:bg-gray-600 hover:text-gray-700;
+        @apply shadow-sm;
+        @apply focus:outline-none focus:ring-2 focus:ring-gray-500; 
+        @apply focus:ring-offset-2 focus:ring-offset-gray-50;
+    }
+    .btn-wide {
+        
+        @apply w-full;
+        @apply block;
+    }
+
+    .btn-ring {
+        
+        @apply rounded-full ;
+    }
+        
+    .primary {
+        @apply rounded-md ;
+        
+        @apply border-primary-600;    
+        @apply text-primary-inv-600;
+        @apply bg-primary-600;
+        @apply hover:bg-white;
+        @apply hover:text-primary-600;
+        @apply focus:ring-primary-500;
+    }
+
+    .btn-ring-primary {
+        
+        @apply border-primary-600;    
+        @apply text-primary-inv-600;
+        @apply bg-primary-600;
+        @apply hover:bg-white;
+        @apply hover:text-primary-600;
+        @apply focus:ring-primary-500;
+        }
+    .btn-ring-primary-light {
+        
+        @apply border-primary-600;    
+        @apply text-primary-500;
+        @apply hover:bg-primary-600;
+        @apply hover:text-primary-inv-700;
+        @apply focus:ring-primary-500;
+    }
+
+    .secondary {
+        
+        @apply rounded-md ;
+        @apply border-secondary-600;    
+        @apply text-secondary-inv-600;
+        @apply bg-secondary-600;
+        @apply hover:bg-white;
+        @apply hover:text-secondary-600;
+        @apply focus:ring-secondary-500;
+    }
+    .btn-ring-secondary {
+        
+        @apply border-secondary-600;    
+        @apply text-secondary-inv-600;
+        @apply bg-secondary-600;
+        @apply hover:bg-white;
+        @apply hover:text-secondary-600;
+        @apply focus:ring-secondary-500;
+    }
+
+    .btn-ring-secondary-light {
+        
+        @apply border-secondary-500;    
+        @apply text-secondary-500;
+        @apply hover:bg-secondary-600;
+        @apply hover:text-secondary-inv-600;
+        @apply focus:ring-secondary-500;
+    }
+    .tertiary {
+        @apply rounded-md ;
+        
+        @apply border-tertiary-600;    
+        @apply text-tertiary-inv-600;
+        @apply bg-tertiary-600;
+        @apply hover:bg-white;
+        @apply hover:text-tertiary-600;
+        @apply focus:ring-tertiary-500;
+    }
+    
+    .btn-ring-tertiary {
+        
+        @apply border-tertiary-600;    
+        @apply text-tertiary-inv-600;
+        @apply bg-tertiary-600;
+        @apply hover:bg-white;
+        @apply hover:text-tertiary-600;
+        @apply focus:ring-tertiary-500;
+        }
+    .btn-ring-tertiary-light {
+        
+        @apply border-tertiary-600;    
+        @apply text-tertiary-500;
+        @apply hover:bg-tertiary-600;
+        @apply hover:text-tertiary-inv-700;
+        @apply focus:ring-tertiary-500;
+    }
+
+    .cta {
+        @apply rounded-md ;
+        
+        @apply border-cta-600 text-cta-inv-600 bg-cta-600;
+        @apply hover:bg-white hover:text-cta-600;
+        @apply focus:ring-cta-500;
+    }
+    
+    .btn-ring-cta {
+        
+        @apply border-cta-600 text-cta-inv-600 bg-cta-600;
+        @apply hover:bg-white hover:text-cta-600;
+        @apply focus:ring-cta-500;
+        }
+    .btn-ring-cta-light {
+        
+        @apply border-cta-600 text-cta-500;
+        @apply hover:bg-cta-600 hover:text-cta-inv-700;
+        @apply focus:ring-cta-500;
+    }
+
+    .btn-small {
+        @apply px-3;
+        @apply py-2;
+        @apply text-sm;
+    }
+  
+  }
