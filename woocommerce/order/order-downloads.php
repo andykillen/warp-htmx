@@ -19,16 +19,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section class="woocommerce-order-downloads">
+<section <?php warp_add_class('orders.section', ['append' => "woocommerce-order-downloads" ]) ?>>
 	<?php if ( isset( $show_title ) ) : ?>
-		<h2 class="woocommerce-order-downloads__title"><?php esc_html_e( 'Downloads', 'woocommerce' ); ?></h2>
+		<h2 <?php warp_add_class('orders.h2', ['append' => "woocommerce-order-downloads__title" ]) ?>><?php esc_html_e( 'Downloads', 'woocommerce' ); ?></h2>
 	<?php endif; ?>
 
-	<table class="woocommerce-table woocommerce-table--order-downloads shop_table shop_table_responsive order_details">
+	<table <?php warp_add_class('orders.table', ['append' => "woocommerce-table, woocommerce-table--order-downloads, shop_table, shop_table_responsive, order_details" ]) ?>>
 		<thead>
 			<tr>
 				<?php foreach ( wc_get_account_downloads_columns() as $column_id => $column_name ) : ?>
-				<th class="<?php echo esc_attr( $column_id ); ?>"><span class="nobr"><?php echo esc_html( $column_name ); ?></span></th>
+				<th <?php warp_add_class('orders.table.th', ['append' => esc_attr( $column_id ) ]) ?>><span <?php warp_add_class('orders.span', ['append' => "nobr" ]) ?>><?php echo esc_html( $column_name ); ?></span></th>
 				<?php endforeach; ?>
 			</tr>
 		</thead>
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php foreach ( $downloads as $download ) : ?>
 			<tr>
 				<?php foreach ( wc_get_account_downloads_columns() as $column_id => $column_name ) : ?>
-					<td class="<?php echo esc_attr( $column_id ); ?>" data-title="<?php echo esc_attr( $column_name ); ?>">
+					<td <?php warp_add_class('orders.table.td', ['append' => esc_attr( $column_id ) ]) ?> data-title="<?php echo esc_attr( $column_name ); ?>">
 						<?php
 						if ( has_action( 'woocommerce_account_downloads_column_' . $column_id ) ) {
 							do_action( 'woocommerce_account_downloads_column_' . $column_id, $download );
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									}
 									break;
 								case 'download-file':
-									echo '<a href="' . esc_url( $download['download_url'] ) . '" class="woocommerce-MyAccount-downloads-file button alt">' . esc_html( $download['download_name'] ) . '</a>';
+									echo '<a href="' . esc_url( $download['download_url'] ) . '" '. warp_get_class('orders.a', ['append' => 'woocommerce-MyAccount-downloads-file, button, alt']) .'>' . esc_html( $download['download_name'] ) . '</a>';
 									break;
 								case 'download-remaining':
 									echo is_numeric( $download['downloads_remaining'] ) ? esc_html( $download['downloads_remaining'] ) : esc_html__( '&infin;', 'woocommerce' );

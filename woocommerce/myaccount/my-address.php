@@ -47,7 +47,7 @@ $col    = 1;
 </p>
 
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) : ?>
-	<div class="u-columns woocommerce-Addresses col2-set addresses">
+	<div <?php warp_add_class('my-account.div', ['append' => "u-columns, woocommerce-Addresses, col2-set, addresses" ]) ?>>
 <?php endif; ?>
 
 <?php foreach ( $get_addresses as $name => $address_title ) : ?>
@@ -57,10 +57,10 @@ $col    = 1;
 		$oldcol  = $oldcol * -1;
 	?>
 
-	<div class="u-column<?php echo $col < 0 ? 1 : 2; ?> col-<?php echo $oldcol < 0 ? 1 : 2; ?> woocommerce-Address">
-		<header class="woocommerce-Address-title title">
+	<div <?php warp_add_class('grid.columns-2', ['append' => 'u-column' . ($col < 0 ? 1 : 2) . ' col-' . $oldcol < 0 ? 1 : 2 . ' woocommerce-Address' ]) ?>>
+		<header <?php warp_add_class('my-account.header', ['append' => "woocommerce-Address-title, title" ]) ?>>
 			<h2><?php echo esc_html( $address_title ); ?></h2>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit">
+			<a <?php warp_add_class('my-account.a', ['append' => "edit" ]) ?> href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>">
 				<?php
 					printf(
 						/* translators: %s: Address title */

@@ -20,7 +20,7 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<form name="checkout" method="post" class="woocommerce-form woocommerce-verify-email" action="<?php echo esc_url( $verify_url ); ?>" enctype="multipart/form-data">
+<form <?php warp_add_class('checkout.form', ['append' => "woocommerce-form, woocommerce-verify-email" ]) ?> name="checkout" method="post" action="<?php echo esc_url( $verify_url ); ?>" enctype="multipart/form-data">
 
 	<?php
 	wp_nonce_field( 'wc_verify_email', 'check_submission' );
@@ -40,13 +40,13 @@ defined( 'ABSPATH' ) || exit;
 		?>
 	</p>
 
-	<p class="form-row">
-		<label for="email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input type="email" class="input-text" name="email" id="email" autocomplete="email" />
+	<p <?php warp_add_class('html.p', ['append' => "form-row" ]) ?>>
+		<label for="email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;<span <?php warp_add_class('html.span', ['append' => "required" ]) ?>>*</span></label>
+		<input <?php warp_add_class('html.input', ['append' => "input.text" ]) ?> type="email" name="email" id="email" autocomplete="email" />
 	</p>
 
-	<p class="form-row">
-		<button type="submit" class="woocommerce-button button <?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ); ?>" name="verify" value="1">
+	<p <?php warp_add_class('html.p', ['append' => "form-row" ]) ?> class="form-row">
+		<button <?php warp_add_class('checkout.div', ['append' => 'woocommerce-button, button' . esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ) ]) ?> type="submit" name="verify" value="1">
 			<?php esc_html_e( 'Verify', 'woocommerce' ); ?>
 		</button>
 	</p>

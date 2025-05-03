@@ -20,7 +20,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">
+<p <?php warp_add_class('html.p', ['append' => "woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received" ]) ?>>
 	<?php
 	/**
 	 * Filter the message shown after a checkout is complete.

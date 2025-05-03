@@ -101,7 +101,9 @@
         "dfn" : "",
         "kbd" : "",
         "samp" : "",
-        "var" : ""
+        "var" : "",
+        "div" : "mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4",
+        "span" : "block text-sm font-medium text-gray-900" 
     },
     "excerpt" : {
         "container" : "text-sm text-gray-500",
@@ -209,7 +211,100 @@
     },
 
     "checkout" : {
+        "div" : "mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4",
+        "form" : {
+            "container" : "lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16"
+        },
+        "thank_you":{
+            "div" : "mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8",
+            "p" : "mt-2 text-4xl font-bold tracking-tight sm:text-5xl",
+            "h1" : "text-base font-medium text-indigo-600",
+            "ul" :{
+                "container" : "divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+                "li" : "flex py-6 sm:py-10"
+            },
+            "a" : "focus:ring-4 focus:ring-primary-300 no-underline hover:underline hover:text-primary-600 text-grey-400"
+        }
+    },
 
+    "my-account" : {
+        "div" : "bg-white py-16 sm:py-24",
+        "h1" : "text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl",
+        "h2" : "sr-only",
+        "p" : "mt-2 text-sm text-gray-500",
+        "button" : "-m-2 flex items-center p-2 text-gray-400 hover:text-gray-500",
+        "input" : "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm",
+        "span" : "sr-only",
+        "label" : "block text-sm font-medium text-gray-700",
+        "a" : "block px-4 py-2 text-sm text-gray-700",
+        "ul" : {
+            "container" : "divide-y divide-gray-200",
+            "li" : "p-4 sm:p-6"
+        },
+        "form" : {
+            "container" : "lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16"
+        },
+        "header" : {
+            "container" : "bg-white shadow-sm"   
+        },
+        "nav" : {
+            "container" : "lg:block lg:ml-10 lg:pr-4 lg:space-x-8",
+            "a" : "font-medium text-gray-900 hover:text-gray-900"
+        },
+        "table" : {
+            "container" : "mt-4 w-full text-gray-500 sm:mt-6",
+            "thead" : "sr-only text-left text-sm text-gray-500 sm:not-sr-only",
+            "th" : "py-3 pr-8 font-normal sm:w-2/5 lg:w-1/3",
+            "tbody" : "divide-y divide-gray-200 border-b border-gray-200 text-sm sm:border-t",
+            "td" : "py-6 pr-8",
+            "tr" : "",
+            "tfoot" : "divide-y divide-gray-200 border-b border-gray-200 text-sm sm:border-t"
+        },
+        "ol" : {
+            "container" : "divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+            "li" : "flex py-6 sm:py-10"
+        }
+    },
+
+    "orders" : {
+        "div" : "bg-white py-16 sm:py-24",
+        "h1" : "text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl",
+        "h2" : "sr-only",
+        "p" : "mt-2 text-sm text-gray-500",
+        "button" : "-m-2 flex items-center p-2 text-gray-400 hover:text-gray-500",
+        "input" : "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm",
+        "span" : "sr-only",
+        "strong" : "",
+        "label" : "block text-sm font-medium text-gray-700",
+        "a" : "block px-4 py-2 text-sm text-gray-700",
+        "ul" : {
+            "container" : "divide-y divide-gray-200",
+            "li" : "p-4 sm:p-6"
+        },
+        "form" : {
+            "container" : "lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16"
+        },
+        "header" : {
+            "container" : "bg-white shadow-sm"   
+        },
+        "nav" : {
+            "container" : "lg:block lg:ml-10 lg:pr-4 lg:space-x-8",
+            "a" : "font-medium text-gray-900 hover:text-gray-900"
+        },
+        "table" : {
+            "container" : "mt-4 w-full text-gray-500 sm:mt-6",
+            "thead" : "sr-only text-left text-sm text-gray-500 sm:not-sr-only",
+            "th" : "py-3 pr-8 font-normal sm:w-2/5 lg:w-1/3",
+            "tbody" : "divide-y divide-gray-200 border-b border-gray-200 text-sm sm:border-t",
+            "td" : "py-6 pr-8",
+            "tr" : "",
+            "tfoot" : "divide-y divide-gray-200 border-b border-gray-200 text-sm sm:border-t"
+        },
+        "ol" : {
+            "container" : "divide-y divide-gray-200 border-b border-t border-gray-200 mb-4",
+            "li" : "flex py-6 sm:py-10"
+        },
+        "section" : "mx-auto max-w-2xl pt-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
     },
 
     "menu" : {

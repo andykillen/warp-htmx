@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 $notes = $order->get_customer_order_notes();
 ?>
 
-<p class="order-info">
+<p <?php warp_add_class('orders.p', ['append' => "order-info" ]) ?>>
 	<?php
 	echo wp_kses_post(
 		apply_filters(
@@ -28,9 +28,9 @@ $notes = $order->get_customer_order_notes();
 			sprintf(
 				/* translators: 1: order number 2: order date 3: order status */
 				__( 'Order #%1$s was placed on %2$s and is currently %3$s.', 'woocommerce' ),
-				'<mark class="order-number">' . $order->get_order_number() . '</mark>',
-				'<mark class="order-date">' . wc_format_datetime( $order->get_date_created() ) . '</mark>',
-				'<mark class="order-status">' . wc_get_order_status_name( $order->get_status() ) . '</mark>'
+				'<mark '. warp_get_class('html.mark', ['append' => 'order-number']) .'>' . $order->get_order_number() . '</mark>',
+				'<mark '. warp_get_class('html.mark', ['append' => 'order-date']) .'>' . wc_format_datetime( $order->get_date_created() ) . '</mark>',
+				'<mark '. warp_get_class('html.mark', ['append' => 'order-status']) .'>' . wc_get_order_status_name( $order->get_status() ) . '</mark>'
 			)
 		)
 	);
@@ -39,18 +39,18 @@ $notes = $order->get_customer_order_notes();
 
 <?php if ( $notes ) : ?>
 	<h2><?php esc_html_e( 'Order updates', 'woocommerce' ); ?></h2>
-	<ol class="commentlist notes">
+	<ol <?php warp_add_class('orders.ol', ['append' => "commentlist, notes" ]) ?>>
 		<?php foreach ( $notes as $note ) : ?>
-		<li class="comment note">
-			<div class="comment_container">
-				<div class="comment-text">
-					<p class="meta"><?php echo date_i18n( esc_html__( 'l jS \o\f F Y, h:ia', 'woocommerce' ), strtotime( $note->comment_date ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-					<div class="description">
+		<li <?php warp_add_class('orders.ol.li', ['append' => "comment, note" ]) ?>>
+			<div <?php warp_add_class('orders.div', ['append' => "comment_container" ]) ?>>
+				<div <?php warp_add_class('orders.div', ['append' => "comment-text" ]) ?>>
+					<p <?php warp_add_class('orders.p', ['append' => "meta" ]) ?>><?php echo date_i18n( esc_html__( 'l jS \o\f F Y, h:ia', 'woocommerce' ), strtotime( $note->comment_date ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<div <?php warp_add_class('orders.div', ['append' => "description" ]) ?>>
 						<?php echo wpautop( wptexturize( $note->comment_content ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 					</div>
-					<div class="clear"></div>
+					<div <?php warp_add_class('orders.div', ['append' => "clear" ]) ?>></div>
 				</div>
-				<div class="clear"></div>
+				<div <?php warp_add_class('orders.div', ['append' => "clear" ]) ?>></div>
 			</div>
 		</li>
 		<?php endforeach; ?>

@@ -25,7 +25,7 @@ if ( ! $notices ) {
 
 ?>
 
-<ul class="woocommerce-error" role="alert">
+<ul <?php warp_add_class('html.ul', ['append' => "woocommerce-error" ]) ?> role="alert">
 	<?php foreach ( $notices as $notice ) : ?>
 		<li<?php echo wc_get_notice_data_attr( $notice ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<?php echo wc_kses_notice( $notice['notice'] ); ?>

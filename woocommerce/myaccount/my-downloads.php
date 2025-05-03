@@ -28,7 +28,7 @@ if ( $downloads ) : ?>
 
 	<h2><?php echo apply_filters( 'woocommerce_my_account_my_downloads_title', esc_html__( 'Available downloads', 'woocommerce' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
 
-	<ul class="woocommerce-Downloads digital-downloads">
+	<ul <?php warp_add_class('my-account.ul', ['append' => "woocommerce-Downloads, digital-downloads" ]) ?>>
 		<?php foreach ( $downloads as $download ) : ?>
 			<li>
 				<?php
@@ -36,7 +36,7 @@ if ( $downloads ) : ?>
 
 				if ( is_numeric( $download['downloads_remaining'] ) ) {
 					/* translators: %s product name */
-					echo apply_filters( 'woocommerce_available_download_count', '<span class="woocommerce-Count count">' . sprintf( _n( '%s download remaining', '%s downloads remaining', $download['downloads_remaining'], 'woocommerce' ), $download['downloads_remaining'] ) . '</span> ', $download ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo apply_filters( 'woocommerce_available_download_count', '<span '. warp_get_class('my-account.span', ['append' => "woocommerce-Count count"]) .'>' . sprintf( _n( '%s download remaining', '%s downloads remaining', $download['downloads_remaining'], 'woocommerce' ), $download['downloads_remaining'] ) . '</span> ', $download ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 
 				echo apply_filters( 'woocommerce_available_download_link', '<a href="' . esc_url( $download['download_url'] ) . '">' . $download['download_name'] . '</a>', $download ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

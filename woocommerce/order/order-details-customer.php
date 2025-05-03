@@ -19,26 +19,26 @@ defined( 'ABSPATH' ) || exit;
 
 $show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_address();
 ?>
-<section class="woocommerce-customer-details">
+<section <?php warp_add_class('orders.section', ['append' => "woocommerce-customer-details" ]) ?>>
 
 	<?php if ( $show_shipping ) : ?>
 
-	<section class="woocommerce-columns woocommerce-columns--2 woocommerce-columns--addresses col2-set addresses">
-		<div class="woocommerce-column woocommerce-column--1 woocommerce-column--billing-address col-1">
+	<section <?php warp_add_class('orders.section', ['append' => "woocommerce-columns, woocommerce-columns--2, woocommerce-columns--addresses, col2-set, addresses" ]) ?>>
+		<div <?php warp_add_class('orders.div', ['append' => "woocommerce-column, woocommerce-column--1, woocommerce-column--billing-address, col-1" ]) ?>>
 
 	<?php endif; ?>
 
-	<h2 class="woocommerce-column__title"><?php esc_html_e( 'Billing address', 'woocommerce' ); ?></h2>
+	<h2 <?php warp_add_class('orders.h2', ['append' => "woocommerce-column__title" ]) ?>><?php esc_html_e( 'Billing address', 'woocommerce' ); ?></h2>
 
 	<address>
 		<?php echo wp_kses_post( $order->get_formatted_billing_address( esc_html__( 'N/A', 'woocommerce' ) ) ); ?>
 
 		<?php if ( $order->get_billing_phone() ) : ?>
-			<p class="woocommerce-customer-details--phone"><?php echo esc_html( $order->get_billing_phone() ); ?></p>
+			<p <?php warp_add_class('orders.p', ['append' => "woocommerce-customer-details--phone" ]) ?>><?php echo esc_html( $order->get_billing_phone() ); ?></p>
 		<?php endif; ?>
 
 		<?php if ( $order->get_billing_email() ) : ?>
-			<p class="woocommerce-customer-details--email"><?php echo esc_html( $order->get_billing_email() ); ?></p>
+			<p <?php warp_add_class('orders.p', ['append' => "woocommerce-customer-details--email" ]) ?>><?php echo esc_html( $order->get_billing_email() ); ?></p>
 		<?php endif; ?>
 
 		<?php
@@ -57,13 +57,13 @@ $show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_a
 
 		</div><!-- /.col-1 -->
 
-		<div class="woocommerce-column woocommerce-column--2 woocommerce-column--shipping-address col-2">
-			<h2 class="woocommerce-column__title"><?php esc_html_e( 'Shipping address', 'woocommerce' ); ?></h2>
+		<div <?php warp_add_class('orders.div', ['append' => "woocommerce-column, woocommerce-column--2, woocommerce-column--shipping-address, col-2" ]) ?>>
+			<h2 <?php warp_add_class('orders.h2', ['append' => "woocommerce-column__title" ]) ?>><?php esc_html_e( 'Shipping address', 'woocommerce' ); ?></h2>
 			<address>
 				<?php echo wp_kses_post( $order->get_formatted_shipping_address( esc_html__( 'N/A', 'woocommerce' ) ) ); ?>
 
 				<?php if ( $order->get_shipping_phone() ) : ?>
-					<p class="woocommerce-customer-details--phone"><?php echo esc_html( $order->get_shipping_phone() ); ?></p>
+					<p <?php warp_add_class('orders.p', ['append' => "woocommerce-customer-details--phone" ]) ?>><?php echo esc_html( $order->get_shipping_phone() ); ?></p>
 				<?php endif; ?>
 
 				<?php

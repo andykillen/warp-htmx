@@ -21,35 +21,35 @@ defined( 'ABSPATH' ) || exit;
  */
 ?>
 
-<div class="order-attribution-metabox">
+<div <?php warp_add_class('orders.div', ['append' => "order-attribution-metabox" ]) ?>>
 
 	<?php if ( array_key_exists( 'origin', $meta ) ) : ?>
 		<h4><?php esc_html_e( 'Origin', 'woocommerce' ); ?></h4>
 	<?php endif; ?>
 
-	<div class="woocommerce-order-attribution-origin-container">
+	<div <?php warp_add_class('orders.div', ['append' => "woocommerce-order-attribution-origin-container" ]) ?>>
 
 		<?php if ( array_key_exists( 'origin', $meta ) ) : ?>
-			<span class="order-attribution-origin">
+			<span <?php warp_add_class('orders.span', ['append' => "order-attribution-origin" ]) ?>>
 				<?php echo esc_html( $meta['origin'] ); ?>
 			</span>
 		<?php endif; ?>
 
 		<?php if ( $has_more_details ) : ?>
 
-			<a href="" class="woocommerce-order-attribution-details-toggle" aria-expanded="false">
-				<span class="toggle-text show"><?php esc_html_e( 'Show details', 'woocommerce' ); ?></span>
-				<span class="toggle-text hide" aria-hidden="true"><?php esc_html_e( 'Hide details', 'woocommerce' ); ?></span>
-				<span class="toggle-indicator" aria-hidden="true"></span>
+			<a <?php warp_add_class('orders.a', ['append' => "woocommerce-order-attribution-details-toggle" ]) ?> href="" aria-expanded="false">
+				<span <?php warp_add_class('orders.span', ['append' => "toggle-text show" ]) ?>><?php esc_html_e( 'Show details', 'woocommerce' ); ?></span>
+				<span <?php warp_add_class('orders.span', ['append' => "toggle-text hide" ]) ?> aria-hidden="true"><?php esc_html_e( 'Hide details', 'woocommerce' ); ?></span>
+				<span <?php warp_add_class('orders.span', ['append' => "toggle-indicator" ]) ?> aria-hidden="true"></span>
 			</a>
 		<?php endif; ?>
 
 	</div>
 
-	<div class="woocommerce-order-attribution-details-container closed">
+	<div <?php warp_add_class('orders.div', ['append' => "woocommerce-order-attribution-details-container, closed" ]) ?>>
 		<?php if ( array_key_exists( 'source_type', $meta ) ) : ?>
 			<h4><?php esc_html_e( 'Source type', 'woocommerce' ); ?></h4>
-			<span class="order-attribution-source_type">
+			<span <?php warp_add_class('orders.span', ['append' => "order-attribution-source_type" ]) ?>>
 				<?php echo esc_html( $meta['source_type'] ); ?>
 			</span>
 		<?php endif; ?>
@@ -58,7 +58,7 @@ defined( 'ABSPATH' ) || exit;
 			<h4>
 				<?php esc_html_e( 'Campaign', 'woocommerce' ); ?>
 			</h4>
-			<span class="order-attribution-utm-campaign">
+			<span <?php warp_add_class('orders.span', ['append' => "order-attribution-utm-campaign" ]) ?>>
 				<?php echo esc_html( $meta['utm_campaign'] ); ?>
 			</span>
 		<?php endif; ?>
@@ -67,7 +67,7 @@ defined( 'ABSPATH' ) || exit;
 			<h4>
 				<?php esc_html_e( 'Source', 'woocommerce' ); ?>
 			</h4>
-			<span class="order-attribution-utm-source">
+			<span <?php warp_add_class('orders.span', ['append' => "order-attribution-utm-source" ]) ?>>
 				<?php echo esc_html( $meta['utm_source'] ); ?>
 			</span>
 		<?php endif; ?>
@@ -76,7 +76,7 @@ defined( 'ABSPATH' ) || exit;
 			<h4>
 				<?php esc_html_e( 'Medium', 'woocommerce' ); ?>
 			</h4>
-			<span class="order-attribution-utm-medium">
+			<span <?php warp_add_class('orders.span', ['append' => "order-attribution-utm-medium" ]) ?>>
 				<?php echo esc_html( $meta['utm_medium'] ); ?>
 			</span>
 		<?php endif; ?>
@@ -85,7 +85,7 @@ defined( 'ABSPATH' ) || exit;
 			<h4>
 				<?php esc_html_e( 'Source platform', 'woocommerce' ); ?>
 			</h4>
-			<span class="order-attribution-utm-source-platform">
+			<span <?php warp_add_class('orders.span', ['append' => "order-attribution-utm-source-platform" ]) ?>>
 				<?php echo esc_html( $meta['utm_source_platform'] ); ?>
 			</span>
 		<?php endif; ?>
@@ -94,7 +94,7 @@ defined( 'ABSPATH' ) || exit;
 			<h4>
 				<?php esc_html_e( 'Creative format', 'woocommerce' ); ?>
 			</h4>
-			<span class="order-attribution-utm-creative-format">
+			<span <?php warp_add_class('orders.span', ['append' => "order-attribution-utm-creative-format" ]) ?>>
 				<?php echo esc_html( $meta['utm_creative_format'] ); ?>
 			</span>
 		<?php endif; ?>
@@ -103,7 +103,7 @@ defined( 'ABSPATH' ) || exit;
 			<h4>
 				<?php esc_html_e( 'Marketing tactic', 'woocommerce' ); ?>
 			</h4>
-			<span class="order-attribution-utm-marketing-tactic">
+			<span <?php warp_add_class('orders.span', ['append' => "order-attribution-utm-marketing-tactic" ]) ?>>
 				<?php echo esc_html( $meta['utm_marketing_tactic'] ); ?>
 			</span>
 		<?php endif; ?>
@@ -112,7 +112,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php if ( array_key_exists( 'device_type', $meta ) ) : ?>
 		<h4><?php esc_html_e( 'Device type', 'woocommerce' ); ?></h4>
-		<span class="order-attribution-device_type">
+		<span <?php warp_add_class('orders.span', ['append' => "order-attribution-device_type" ]) ?>>
 			<?php echo esc_html( $meta['device_type'] ); ?>
 		</span>
 	<?php endif; ?>
@@ -131,7 +131,7 @@ defined( 'ABSPATH' ) || exit;
 			);
 			?>
 		</h4>
-		<span class="order-attribution-utm-session-pages">
+		<span <?php warp_add_class('orders.span', ['append' => "order-attribution-utm-session-pages" ]) ?>>
 			<?php echo esc_html( $meta['session_pages'] ); ?>
 		</span>
 	<?php endif; ?>

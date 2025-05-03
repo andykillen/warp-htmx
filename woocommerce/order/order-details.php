@@ -44,17 +44,17 @@ if ( $show_downloads ) {
 	);
 }
 ?>
-<section class="woocommerce-order-details">
+<section <?php warp_add_class('orders.section', ['append' => "woocommerce-order-details" ]) ?>>
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 
-	<h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2>
+	<h2 <?php warp_add_class('orders.h2', ['append' => "woocommerce-order-details__title" ]) ?>><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2>
 
-	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
+	<table <?php warp_add_class('orders.table', ['append' => "woocommerce-table, woocommerce-table--order-details, shop_table, order_details" ]) ?>>
 
 		<thead>
 			<tr>
-				<th class="woocommerce-table__product-name product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
-				<th class="woocommerce-table__product-table product-total"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
+				<th <?php warp_add_class('orders.table.th', ['append' => "woocommerce-table__product-name, product-name" ]) ?>><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
+				<th <?php warp_add_class('orders.table.th', ['append' => "woocommerce-table__product-table, product-total" ]) ?>><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
 			</tr>
 		</thead>
 

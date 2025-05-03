@@ -21,9 +21,9 @@ if ( ! wp_doing_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
 ?>
-<div id="payment" class="woocommerce-checkout-payment">
+<div <?php warp_add_class('checkout.div', ['append' => 'woocommerce-checkout-payment' ]) ?> id="payment">
 	<?php if ( WC()->cart->needs_payment() ) : ?>
-		<ul class="wc_payment_methods payment_methods methods">
+		<ul <?php warp_add_class('html.ul', ['append' => 'wc_payment_methods, payment_methods, methods' ]) ?>>
 			<?php
 			if ( ! empty( $available_gateways ) ) {
 				foreach ( $available_gateways as $gateway ) {
@@ -37,13 +37,13 @@ if ( ! wp_doing_ajax() ) {
 			?>
 		</ul>
 	<?php endif; ?>
-	<div class="form-row place-order">
+	<div <?php warp_add_class('checkout.div', ['append' => 'form-row, place-order' ]) ?>>
 		<noscript>
 			<?php
 			/* translators: $1 and $2 opening and closing emphasis tags respectively */
 			printf( esc_html__( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the %1$sUpdate Totals%2$s button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'woocommerce' ), '<em>', '</em>' );
 			?>
-			<br/><button type="submit" class="button alt<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
+			<br/><button <?php warp_add_class('html.button', ['append' => 'button, alt' . esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ) ]) ?> type="submit" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
 		</noscript>
 
 		<?php wc_get_template( 'checkout/terms.php' ); ?>

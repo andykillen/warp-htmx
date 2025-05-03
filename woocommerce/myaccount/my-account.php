@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
  */
 do_action( 'woocommerce_account_navigation' ); ?>
 
-<div class="woocommerce-MyAccount-content">
+<div <?php warp_add_class('my-account.div', ['append' => "woocommerce-MyAccount-content" ]) ?>>
 	<?php
 		/**
 		 * My Account content.

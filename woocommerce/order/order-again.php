@@ -18,6 +18,6 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<p class="order-again">
-	<a href="<?php echo esc_url( $order_again_url ); ?>" class="button<?php echo esc_attr( $wp_button_class ); ?>"><?php esc_html_e( 'Order again', 'woocommerce' ); ?></a>
+<p <?php warp_add_class('orders.p', ['append' => "order-again" ]) ?>>
+	<a href="<?php echo esc_url( $order_again_url ); ?>" <?php warp_add_class('orders.a', ['append' => 'button'. esc_attr( $wp_button_class ) ]) ?>><?php esc_html_e( 'Order again', 'woocommerce' ); ?></a>
 </p>

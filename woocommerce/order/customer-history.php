@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
  */
 ?>
 
-<div class="customer-history order-attribution-metabox">
+<div <?php warp_add_class('orders.div', ['append' => "customer-history, order-attribution-metabox" ]) ?>>
 	<h4>
 		<?php
 		esc_html_e( 'Total orders', 'woocommerce' );
@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
 		?>
 	</h4>
 
-	<span class="order-attribution-total-orders">
+	<span <?php warp_add_class('orders.span', ['append' => "order-attribution-total-orders" ]) ?>>
 		<?php echo esc_html( $orders_count ); ?>
 	</span>
 
@@ -48,12 +48,12 @@ defined( 'ABSPATH' ) || exit;
 		);
 		?>
 	</h4>
-	<span class="order-attribution-total-spend">
+	<span <?php warp_add_class('orders.span', ['append' => "order-attribution-total-spend" ]) ?>>
 		<?php echo wp_kses_post( wc_price( $total_spend ) ); ?>
 	</span>
 
 	<h4><?php esc_html_e( 'Average order value', 'woocommerce' ); ?></h4>
-	<span class="order-attribution-average-order-value">
+	<span <?php warp_add_class('orders.span', ['append' => "order-attribution-average-order-value" ]) ?>>
 		<?php echo wp_kses_post( wc_price( $avg_order_value ) ); ?>
 	</span>
 </div>
