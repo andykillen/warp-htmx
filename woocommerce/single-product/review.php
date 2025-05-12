@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 
-	<div id="comment-<?php comment_ID(); ?>" class="comment_container">
+	<div <?php warp_add_class('single-product.div', ['append' => "comment_container" ]) ?> id="comment-<?php comment_ID(); ?>">
 
 		<?php
 		/**
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_review_before', $comment );
 		?>
 
-		<div class="comment-text">
+		<div <?php warp_add_class('single-product.div', ['append' => "comment-text" ]) ?>>
 
 			<?php
 			/**

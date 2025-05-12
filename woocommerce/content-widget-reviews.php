@@ -27,12 +27,12 @@ defined( 'ABSPATH' ) || exit;
 
 	<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 		<?php echo $product->get_image(); ?>
-		<span class="product-title"><?php echo wp_kses_post( $product->get_name() ); ?></span>
+		<span <?php warp_add_class('woocommerce-main.span', ['append' => "product-title" ]) ?>><?php echo wp_kses_post( $product->get_name() ); ?></span>
 	</a>
 
 	<?php echo wc_get_rating_html( intval( get_comment_meta( $comment->comment_ID, 'rating', true ) ) ); ?>
 
-	<span class="reviewer">
+	<span <?php warp_add_class('woocommerce-main.span', ['append' => "reviewer" ]) ?>>
 	<?php
 	/* translators: %s: Comment author. */
 	echo sprintf( esc_html__( 'by %s', 'woocommerce' ), get_comment_author( $comment->comment_ID ) );

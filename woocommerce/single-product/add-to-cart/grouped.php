@@ -21,8 +21,8 @@ global $product, $post;
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-<form class="cart grouped_form" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
-	<table cellspacing="0" class="woocommerce-grouped-product-list group_table">
+<form <?php warp_add_class('cart.form', ['append' => "cart, grouped_form" ]) ?> action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
+	<table <?php warp_add_class('cart.summary.table', ['append' => "woocommerce-grouped-product-list, group_table" ]) ?> cellspacing="0">
 		<tbody>
 			<?php
 			$quantites_required      = false;
@@ -50,7 +50,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 					$show_add_to_cart_button = true;
 				}
 
-				echo '<tr id="product-' . esc_attr( $grouped_product_child->get_id() ) . '" class="woocommerce-grouped-product-list-item ' . esc_attr( implode( ' ', wc_get_product_class( '', $grouped_product_child ) ) ) . '">';
+				echo '<tr id="product-' . esc_attr( $grouped_product_child->get_id() ) . '" .' warp_get_class("cart.summary.tr", ["append" => 'woocommerce-grouped-product-list-item ' . esc_attr( implode( ' ', wc_get_product_class( '', $grouped_product_child ) ) ) ]) .'>';
 
 				// Output columns for each product.
 				foreach ( $grouped_product_columns as $column_id ) {
@@ -63,8 +63,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							if ( ! $grouped_product_child->is_purchasable() || $grouped_product_child->has_options() || ! $grouped_product_child->is_in_stock() ) {
 								woocommerce_template_loop_add_to_cart();
 							} elseif ( $grouped_product_child->is_sold_individually() ) {
-								echo '<input type="checkbox" name="' . esc_attr( 'quantity[' . $grouped_product_child->get_id() . ']' ) . '" value="1" class="wc-grouped-product-add-to-cart-checkbox" id="' . esc_attr( 'quantity-' . $grouped_product_child->get_id() ) . '" />';
-								echo '<label for="' . esc_attr( 'quantity-' . $grouped_product_child->get_id() ) . '" class="screen-reader-text">' . esc_html__( 'Buy one of this item', 'woocommerce' ) . '</label>';
+								echo '<input type="checkbox" name="' . esc_attr( 'quantity[' . $grouped_product_child->get_id() . ']' ) . '" value="1" '. warp_get_class("html.checkbox", ["append" => "wc-grouped-product-add-to-cart-checkbox" ])  .' id="' . esc_attr( 'quantity-' . $grouped_product_child->get_id() ) . '" />';
+								echo '<label for="' . esc_attr( 'quantity-' . $grouped_product_child->get_id() ) . '" '. warp_get_class("html.label", ["append" => "screen-reader-text" ]) .'>' . esc_html__( 'Buy one of this item', 'woocommerce' ) . '</label>';
 							} else {
 								do_action( 'woocommerce_before_add_to_cart_quantity' );
 
@@ -96,7 +96,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							break;
 					}
 
-					echo '<td class="woocommerce-grouped-product-list-item__' . esc_attr( $column_id ) . '">' . apply_filters( 'woocommerce_grouped_product_list_column_' . $column_id, $value, $grouped_product_child ) . '</td>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo '<td '. warp_get_class("cart.summary.td", ["append" => 'woocommerce-grouped-product-list-item__' . esc_attr( $column_id ) ]) .'>' . apply_filters( 'woocommerce_grouped_product_list_column_' . $column_id, $value, $grouped_product_child ) . '</td>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 					do_action( 'woocommerce_grouped_product_list_after_' . $column_id, $grouped_product_child );
 				}
@@ -117,7 +117,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-		<button type="submit" class="single_add_to_cart_button button alt<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+		<button <?php warp_add_class('html.button', ['append' => 'single_add_to_cart_button, button, alt'. esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ) ]) ?> type="submit"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 

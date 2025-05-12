@@ -31,11 +31,11 @@ $average      = $product->get_average_rating();
 
 if ( $rating_count > 0 ) : ?>
 
-	<div class="woocommerce-product-rating">
+	<div <?php warp_add_class('single-product.div', ['append' => "woocommerce-product-rating" ]) ?>>
 		<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
 		<?php if ( comments_open() ) : ?>
 			<?php //phpcs:disable ?>
-			<a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)</a>
+			<a <?php warp_add_class('single-product.a', ['append' => "woocommerce-review-link" ]) ?> href="#reviews" rel="nofollow">(<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span '. warp_get_class('single-product.span', ['append' => 'count']) .'>' . esc_html( $review_count ) . '</span>' ); ?>)</a>
 			<?php // phpcs:enable ?>
 		<?php endif ?>
 	</div>

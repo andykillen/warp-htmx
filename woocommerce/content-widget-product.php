@@ -30,7 +30,7 @@ if ( ! is_a( $product, 'WC_Product' ) ) {
 
 	<a href="<?php echo esc_url( $product->get_permalink() ); ?>">
 		<?php echo $product->get_image(); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-		<span class="product-title"><?php echo wp_kses_post( $product->get_name() ); ?></span>
+		<span <?php warp_add_class('woocommerce-main.span', ['append' => "product-title" ]) ?>><?php echo wp_kses_post( $product->get_name() ); ?></span>
 	</a>
 
 	<?php if ( ! empty( $show_rating ) ) : ?>

@@ -25,18 +25,18 @@ $variations_attr = function_exists( 'wc_esc_json' ) ? wc_esc_json( $variations_j
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo $variations_attr; // WPCS: XSS ok. ?>">
+<form <?php warp_add_class('cart.form', ['append' => "cart, variations_form" ]) ?> action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo $variations_attr; // WPCS: XSS ok. ?>">
 	<?php do_action( 'woocommerce_before_variations_form' ); ?>
 
 	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
-		<p class="stock out-of-stock"><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', __( 'This product is currently out of stock and unavailable.', 'woocommerce' ) ) ); ?></p>
+		<p <?php warp_add_class('html.p', ['append' => "stock out-of-stock" ]) ?>><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', __( 'This product is currently out of stock and unavailable.', 'woocommerce' ) ) ); ?></p>
 	<?php else : ?>
-		<table class="variations" role="presentation">
+		<table <?php warp_add_class('cart.summary.table', ['append' => "variations" ]) ?> role="presentation">
 			<tbody>
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 					<tr>
-						<th class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></th>
-						<td class="value">
+						<th <?php warp_add_class('cart.summary.th', ['append' => "label" ]) ?>><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></th>
+						<td <?php warp_add_class('cart.summary.td', ['append' => "value" ]) ?>>
 							<?php
 								wc_dropdown_variation_attribute_options(
 									array(
@@ -58,17 +58,17 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							 *
 							 * @param string  $button The reset variation button HTML.
 							 */
-							echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<button class="reset_variations"  aria-label="' . esc_html__( 'Clear options', 'woocommerce' ) . '">' . esc_html__( 'Clear', 'woocommerce' ) . '</button>' ) ) : '';
+							echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<button '. warp_get_class('html.button', ['append' => 'reset_variations']) .' aria-label="' . esc_html__( 'Clear options', 'woocommerce' ) . '">' . esc_html__( 'Clear', 'woocommerce' ) . '</button>' ) ) : '';
 							?>
 						</td>
 					</tr>
 				<?php endforeach; ?>
 			</tbody>
 		</table>
-		<div class="reset_variations_alert screen-reader-text" role="alert" aria-live="polite" aria-relevant="all"></div>
+		<div <?php warp_add_class('html.div', ['append' => "reset_variations_alert, screen-reader-text" ]) ?> role="alert" aria-live="polite" aria-relevant="all"></div>
 		<?php do_action( 'woocommerce_after_variations_table' ); ?>
 
-		<div class="single_variation_wrap">
+		<div <?php warp_add_class('html.div', ['append' => "single_variation_wrap" ]) ?>>
 			<?php
 				/**
 				 * Hook: woocommerce_before_single_variation.

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $upsells ) : ?>
 
-	<section class="up-sells upsells products">
+	<section <?php warp_add_class('single-product.section', ['append' => "up-sells, upsells, products" ]) ?>>
 		<?php
 		$heading = apply_filters( 'woocommerce_product_upsells_products_heading', __( 'You may also like&hellip;', 'woocommerce' ) );
 

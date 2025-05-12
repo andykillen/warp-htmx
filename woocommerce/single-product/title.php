@@ -19,4 +19,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-the_title( '<h1 class="product_title entry-title">', '</h1>' );
+the_title( '<h1 '. warp_get_class('single-product.h1', ['append' => 'product_title, entry-title']) .'>', '</h1>' );

@@ -43,7 +43,7 @@ if ( post_password_required() ) {
 	do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="summary entry-summary">
+	<div <?php warp_add_class('woocommerce-main.div', ['append' => "summary, entry-summary" ]) ?>>
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.

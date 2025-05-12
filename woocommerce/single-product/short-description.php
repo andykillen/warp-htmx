@@ -28,6 +28,6 @@ if ( ! $short_description ) {
 }
 
 ?>
-<div class="woocommerce-product-details__short-description">
+<div <?php warp_add_class('single-product.div', ['append' => "woocommerce-product-details__short-description" ]) ?>>
 	<?php echo $short_description; // WPCS: XSS ok. ?>
 </div>
